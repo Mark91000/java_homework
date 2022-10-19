@@ -1,0 +1,63 @@
+public class Homework_10.10/1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a word: ");
+        String word = scanner.nextLine();
+
+        if (word.length() % 2 != 0){
+            System.out.println("Your word contains an odd number of letters,restart the program and enter a word with an even number of letters.");
+            return;
+        };
+
+        System.out.println("Lenght of the word is: " + word.length());
+
+        String firstPartOfWord = word.substring(0,word.length()/2);
+        System.out.println("First part of the word is: " + firstPartOfWord);
+
+        String lastPartOfWord = word.substring(word.length()/2);
+        System.out.println("Last part of the word is: " + lastPartOfWord);
+    }
+}
+public class Homework_10.10/2 {
+    public static void main(String[] args) {
+        class Calc {
+            private double firstNumber;
+            private double secondNamber;
+
+            public Calc(double firstNumber, double secondNamber){
+                this.firstNumber = firstNumber;
+                this.secondNamber = secondNamber;
+            }
+            public double Add(){
+                return firstNumber + secondNamber;
+            }
+            public double Sub(){
+                return firstNumber - secondNamber;
+            }
+            public double Mul(){
+                return firstNumber * secondNamber;
+            }
+            public double Div(){
+                return firstNumber / secondNamber;
+            }
+            public void Result(){
+                System.out.println("firstNumber + secondNamber = " + Add());
+                System.out.println("firstNumber - secondNamber = " + Sub());
+                System.out.println("firstNumber * secondNamber = " + Mul());
+                System.out.println("firstNumber + secondNamber = " + Div());
+            }
+        }
+    }
+}
+public class Homework_10.10/3 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your amount in €: ");
+        double euro = scanner.nextDouble();
+
+        System.out.println("Your amount is: " + (euro* 0.97) + "$");
+    }
+}
